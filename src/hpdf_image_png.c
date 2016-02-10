@@ -431,7 +431,7 @@ LoadPngData  (HPDF_Dict     image,
 
 	/* create read_struct. */
 	png_ptr = png_create_read_struct (PNG_LIBPNG_VER_STRING,
-			image->error, PngErrorFunc, PngErrorFunc);
+			image->error, PngErrorFunc, NULL);
 
 	if (png_ptr == NULL) {
 		HPDF_SetError (image->error, HPDF_FAILD_TO_ALLOC_MEM, 0);
